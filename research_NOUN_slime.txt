@@ -1,0 +1,91 @@
+Similarity Ranking:
+0:  Mono Lake is believed to have formed at least 760,000 years ago, dating back to the Long Valley eruption.
+similarity: 333
+--------------------------------
+1: Other settlements were Toro, in the extreme south, 1827, and Noble, in the north portion, dating back to the 1830s.
+similarity: 323
+--------------------------------
+2:   ===Early history=== The area comprising the city of Bell has a Native American history dating back thousands of years.
+similarity: 320
+--------------------------------
+3: Under this broader definition, the earliest known sharks date back to more than 420 million years ago.
+similarity: 302
+--------------------------------
+4:  ====Kenya====     As littoral states of the Indian Ocean, trade links and commercial ties between India and Kenya go back several centuries.
+similarity: 297
+--------------------------------
+5:    ===Early evolution of primates===  Evolutionary history of the primates can be traced back 65 million years.
+similarity: 279
+--------------------------------
+6: Remains of settlements dating back to the 6th century were discovered in the center of today's Lublin on Czwartek ("Thursday") Hill.
+similarity: 259
+--------------------------------
+7:   Evidence of human activity in Jordan dates back to the Paleolithic period.
+similarity: 252
+--------------------------------
+8: Even in this case, the prototypes can be traced back to the works of Rotella and Baj, both far from neutral in their relationship with society.
+similarity: 234
+--------------------------------
+9: Paleo-Indians have been documented in south Florida dating back to over 13,000 years ago.
+similarity: 233
+--------------------------------
+10: The harvesting of wine in La Rioja has an ancient lineage with origins dating back to the Phoenicians and the Celtiberians.
+similarity: 229
+--------------------------------
+11: Some scholars suggest their settlement dates back about 4,000 years.
+similarity: 228
+--------------------------------
+12:  Sri Lanka's documented history spans 3,000 years, with evidence of pre-historic human settlements dating back to at least 125,000 years.
+similarity: 227
+--------------------------------
+13: Recent research indicates that chimpanzees' use of  stone tools dates back at least 4,300 years (about 2,300 BC).
+similarity: 225
+--------------------------------
+14: The history of raising fowl for fighting goes back 6,000 years.
+similarity: 218
+--------------------------------
+15: The oldest is Graduate House, originally a farmhouse dating back to the 19th century.
+similarity: 212
+--------------------------------
+16: The oldest known depiction of hair braiding dates back about 30,000 years.
+similarity: 210
+--------------------------------
+17:  Linen textiles appear to be some of the oldest in the world: their history goes back many thousands of years.
+similarity: 207
+--------------------------------
+18: Examples in Paris include the Pont Alexandre III and Pont Neuf, the latter of which dates back to 1607.
+similarity: 203
+--------------------------------
+19: The chain was the product of a British tradition dating back to pre-Roman times.
+similarity: 201
+--------------------------------
+20: La Giralda is a tower attached to the Cathedral that dates back to the twelfth century.
+similarity: 197
+--------------------------------
+21: There is evidence that human habitation in the Arabian Peninsula dates back to about 106,000 to 130,000 years ago.
+similarity: 192
+--------------------------------
+22:  Tallinn, first mentioned in 1219, received city rights in 1248, but the earliest human settlements date back 5,000 years.
+similarity: 192
+--------------------------------
+23: * ''Altes Schloss'' (the Old Castle), mostly dating from the late 15th century, some parts date back to 1320.
+similarity: 191
+--------------------------------
+24:  === Historical texts === Written accounts of leprosy date back thousands of years.
+similarity: 189
+--------------------------------
+25:  The earliest roots of drilling rocks, a lapidary method, date back to approximately one million years ago.
+similarity: 182
+--------------------------------
+26: That evidence comes from a monk named Eugippio, who reports in several documents going back to 511 that another monk lived here.
+similarity: 179
+--------------------------------
+27:  Abbas's family tree goes back to Aiyub Ansari, the companion of the Islamic prophet Muhammad.
+similarity: 179
+--------------------------------
+28: It is a former keep dating back to the 13th century.
+similarity: 175
+--------------------------------
+29: The fossil record of this family can be traced back to the Oligocene period (34-23 million years ago).
+similarity: 172
+--------------------------------

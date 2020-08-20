@@ -1,0 +1,91 @@
+Difference of Similarity with limit of 30: 
+Nuffield_PROPN
+Difference: 3011, Rank1: 26, Rank2: 3037, Sim1: 3082, Sim2: 13.044792662573565
+--------------------------------
+Austin::Motor::Company_PROPN
+Difference: 2858, Rank1: 28, Rank2: 2886, Sim1: 2955, Sim2: 12.91264436084906
+--------------------------------
+slf_NOUN
+Difference: 1061, Rank1: 22, Rank2: 1083, Sim1: 3216, Sim2: 8.336732528012405
+--------------------------------
+articulated_ADJ
+Difference: 837, Rank1: 23, Rank2: 860, Sim1: 3203, Sim2: 7.5215857415544995
+--------------------------------
+Innovia_PROPN
+Difference: 451, Rank1: 24, Rank2: 475, Sim1: 3159, Sim2: 5.9543932466683
+--------------------------------
+four-axle_ADJ
+Difference: 314, Rank1: 29, Rank2: 343, Sim1: 2932, Sim2: 4.759287005397552
+--------------------------------
+Budd::Company_PROPN
+Difference: 84, Rank1: 27, Rank2: 111, Sim1: 3001, Sim2: 1.251593665759377
+--------------------------------
+shunter_NOUN
+Difference: 82, Rank1: 20, Rank2: 102, Sim1: 3278, Sim2: 1.1199585430706653
+--------------------------------
+railmotor_NOUN
+Difference: 80, Rank1: 25, Rank2: 105, Sim1: 3141, Sim2: 1.1489436894926555
+--------------------------------
+gtw_NOUN
+Difference: 72, Rank1: 21, Rank2: 93, Sim1: 3240, Sim2: 1.0495455250311947
+--------------------------------
+Pullman::Company_PROPN
+Difference: 71, Rank1: 18, Rank2: 89, Sim1: 4253, Sim2: 1.0374535437685846
+--------------------------------
+Bagnall_PROPN
+Difference: 65, Rank1: 19, Rank2: 84, Sim1: 3852, Sim2: 1.0090467275864876
+--------------------------------
+Manning::Wardle_PROPN
+Difference: 53, Rank1: 16, Rank2: 69, Sim1: 5705, Sim2: 0.9541068557855623
+--------------------------------
+Bogie_PROPN
+Difference: 51, Rank1: 14, Rank2: 65, Sim1: 6181, Sim2: 0.9369092806355299
+--------------------------------
+2-10-2_NUM
+Difference: 46, Rank1: 17, Rank2: 63, Sim1: 5479, Sim2: 0.9337570818478408
+--------------------------------
+shunting_NOUN
+Difference: 29, Rank1: 13, Rank2: 42, Sim1: 6589, Sim2: 0.8768671955427517
+--------------------------------
+AAR_PROPN
+Difference: 27, Rank1: 9, Rank2: 36, Sim1: 7837, Sim2: 0.8631377846259557
+--------------------------------
+CGR_PROPN
+Difference: 26, Rank1: 15, Rank2: 41, Sim1: 6141, Sim2: 0.876235449400447
+--------------------------------
+Locomotive_PROPN
+Difference: 23, Rank1: 10, Rank2: 33, Sim1: 7168, Sim2: 0.8589162644029976
+--------------------------------
+roster_VERB
+Difference: 9, Rank1: 12, Rank2: 21, Sim1: 6800, Sim2: 0.8113467316788724
+--------------------------------
+ex-british_ADJ
+Difference: 6, Rank1: 4, Rank2: 10, Sim1: 9140, Sim2: 0.6170686860415192
+--------------------------------
+4-4-0_NOUN
+Difference: 6, Rank1: 8, Rank2: 14, Sim1: 7849, Sim2: 0.692000071567189
+--------------------------------
+garratt_NOUN
+Difference: 6, Rank1: 11, Rank2: 17, Sim1: 7134, Sim2: 0.7777412611595197
+--------------------------------
+reclass_VERB
+Difference: 4, Rank1: 5, Rank2: 9, Sim1: 9124, Sim2: 0.6046851145133366
+--------------------------------
+loco_NOUN
+Difference: 2, Rank1: 3, Rank2: 5, Sim1: 9330, Sim2: 0.4988946503701919
+--------------------------------
+SAR_PROPN
+Difference: 2, Rank1: 6, Rank2: 4, Sim1: 9039, Sim2: 0.4448733165565235
+--------------------------------
+railbus_NOUN
+Difference: 1, Rank1: 2, Rank2: 3, Sim1: 9511, Sim2: 0.43784619670496167
+--------------------------------
+recode_VERB
+Difference: 0, Rank1: 0, Rank2: 0, Sim1: 10130, Sim2: 0.17419069344542581
+--------------------------------
+railcar_NOUN
+Difference: 0, Rank1: 1, Rank2: 1, Sim1: 9671, Sim2: 0.3235685848610745
+--------------------------------
+CSAR_PROPN
+Difference: 0, Rank1: 7, Rank2: 7, Sim1: 8654, Sim2: 0.5580093341495339
+--------------------------------

@@ -1,0 +1,91 @@
+Similarity Ranking:
+0: Partition walls constructed from fibre cement backer board are popular as bases for tiling in kitchens or in wet areas like bathrooms.
+similarity: 3656
+--------------------------------
+1: At one time a firm called Submarine Products sold a sport air scuba set with three manifolded back-mounted cylinders.
+similarity: 3179
+--------------------------------
+2: The harnesses of many diving rebreathers made by Siebe Gorman included a large back-sheet of reinforced rubber.
+similarity: 2988
+--------------------------------
+3: At the double-backer, a second flat linerboard is adhered to the other side of the fluted medium to form single wall corrugated board.
+similarity: 2702
+--------------------------------
+4: *Discover Tec — An introductory confined water experience using technical backmount or sidemount equipment.
+similarity: 2690
+--------------------------------
+5: Each supermodule has two OD PMTs attached on its back side.
+similarity: 2613
+--------------------------------
+6:  The peach baskets were used until 1906 when they were finally replaced by metal hoops with backboards.
+similarity: 2181
+--------------------------------
+7: The shorter borders of the sheet are called the backboards.
+similarity: 1876
+--------------------------------
+8: The difference between these models was less than 10 wires on the backplane.
+similarity: 1809
+--------------------------------
+9: *Tec 40 — limited decompression dives to 40 metres (130 feet) using backmount or sidemount cylinders.
+similarity: 1742
+--------------------------------
+10:  Bulldozers, cranes, graders, excavators, dump trucks, loaders, and backhoes all see extensive use by military engineers.
+similarity: 1707
+--------------------------------
+11: Successful resealing consists of old sealant removal, shaping and cleaning the reservoir, installing the backer rod and installing the sealant.
+similarity: 1687
+--------------------------------
+12: With the combination of the backmost key of the right hand little finger it produces A1 and A2.
+similarity: 1586
+--------------------------------
+13:  ===Doors=== The mechanism has a wooden casing with a front and a back door, both containing inscriptions.
+similarity: 1569
+--------------------------------
+14: This was known as the "undivided back" era of postcards.
+similarity: 1424
+--------------------------------
+15: All jumps are landed on a back outside edge (except stylized variations on some jumps like the half loop or one-foot Axel).
+similarity: 1403
+--------------------------------
+16: Other finds included a spear point near a mastodon bone and a turtle-back scraper and blade found with bear, camel, mastodon, horse, and tapir bones.
+similarity: 1350
+--------------------------------
+17: On the back side was another, more elaborate feasting scene.
+similarity: 1315
+--------------------------------
+18: The Backfoot Lateflip (or "Late Backfoot Flip") has the rider using the back foot to initiate the flip during an ollie.
+similarity: 1304
+--------------------------------
+19: During the 1930s and the 1940s, lights mounted behind the painted backglasses were used for scoring purposes, making the scoring somewhat arbitrary.
+similarity: 1297
+--------------------------------
+20:  ===Back flying=== '''Back flying''' is the ability to fly on the back in a stable and controlled fashion.
+similarity: 1267
+--------------------------------
+21:  For example: * 5211A – back dive, half twist, straight position.
+similarity: 1233
+--------------------------------
+22: Things came full circle in 1975 when Bally created the ''Wizard!'' pinball game featuring Ann-Margret and The Who's Roger Daltrey on the backglass.
+similarity: 1214
+--------------------------------
+23: Fifth generation iPods have their battery attached to the backplate with adhesive.
+similarity: 1159
+--------------------------------
+24: The bracket or backplate is the part that fastens to the card cage to stabilize the card.
+similarity: 1154
+--------------------------------
+25: Popular systems include the 6-Up, 6-Back-Deep, and 6-Back-Slide defense.
+similarity: 1143
+--------------------------------
+26: In the United States, farmland was typically divided as such, and the phrase "the back 40" would refer to the 40 acre parcel to the back of the farm.
+similarity: 1139
+--------------------------------
+27: The back line was  away from home.
+similarity: 1135
+--------------------------------
+28: The stages include a front end, a middle stage, and a back end.
+similarity: 1128
+--------------------------------
+29: The expensive, unique, painted vertical backglass is fragile.
+similarity: 1116
+--------------------------------

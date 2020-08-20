@@ -1,0 +1,122 @@
+Finding similarity for word: The research team are to publish their findings in the Astrophysical Journal .
+
+Coordinate: [ 70.14081049 120.80847931  10.8237648 ]
+Similarity Ranking:
+0: Formally dubbed Ardipithecus ramidus - which means root of the ground ape - the find is detailed in 11 research papers published Thursday by the journal Science .
+
+similarity: 4.40533553252898
+------------------------------------------------
+
+
+1: The research is to appear in the German journal Naturwissenschaften .
+
+similarity: 5.750330013083953
+------------------------------------------------
+
+
+2: The research was published in the journal Optics Communications .
+
+similarity: 5.860105875310685
+------------------------------------------------
+
+
+3: Its findings and those of other research reports follow .
+
+similarity: 5.9213982556324325
+------------------------------------------------
+
+
+4: The complex research -- conducted at more than 100 institutions in 16 nations and led by the Agencourt Bioscience Corp. of Beverly , Mass . -- was reported earlier this month in the journal Nature .
+
+similarity: 6.309776211574514
+------------------------------------------------
+
+
+5: Visit http : / / www3.best-in-class.com / gr191.htm to sign up for a Live Virtual Presentation of this primary research .
+
+similarity: 6.84968325043772
+------------------------------------------------
+
+
+6: The research was presented at this week 's BA Science Festival .
+
+similarity: 7.176560129383744
+------------------------------------------------
+
+
+7: The research that included Yan Hu and Audrey Bellier in Aroian 's group and Professor Edward Platzer at the University of California-Riverside appeared in last week 's early online edition of the Proceedings of the National Academy of Sciences .
+
+similarity: 8.430534752267484
+------------------------------------------------
+
+
+8: The research , published in the Archives of Disease in Childhood , was carried out by experts at the University of Alberta in Canada .
+
+similarity: 9.906925477646485
+------------------------------------------------
+
+
+9: 20 / PRNewswire-USNewswire / -- Dr. Jeremy Schmahmann , Professor of Neurology at Harvard Medical School and neurologist at the Massachusetts General Hospital in Boston , on Thursday , November 19 , presented his laboratory 's research on the new field of study called " Connectivity " at the launch of the MINDlink Foundation .
+
+similarity: 11.76476334381003
+------------------------------------------------
+
+
+10: Very interesting research .
+
+similarity: 13.17246454867241
+------------------------------------------------
+
+
+11: Critics , however , said the new research contradicts basic facts of human genetics .
+
+similarity: 13.768864523179015
+------------------------------------------------
+
+
+12: Depending on how much time is available , you might have each group give a presentation or share three to five of its best ideas from its research .
+
+similarity: 13.790598839258626
+------------------------------------------------
+
+
+13: Gero Miesenboeck , from Oxford University , UK , who carried out the research with J. Dylan Clyne from Yale University , US , said : " It is often the case that males have to work very hard to convince females to mate with them .
+
+similarity: 14.216826973536806
+------------------------------------------------
+
+
+14: They will be collating the results of existing research on the issue .
+
+similarity: 14.358821952638944
+------------------------------------------------
+
+
+15: Therefore , climate experts can 't leave themselves vulnerable by citing non-peer-reviewed research or failing to respond to legitimate questions , some of which happened with both the Climatic Research Unit at the University of East Anglia and the United Nations Intergovernmental Panel on Climate Change .
+
+similarity: 15.464657477667991
+------------------------------------------------
+
+
+16: Three years earlier , the IWC 's scientific committee had concluded there was no way of providing reliable advice on the impacts of cetaceans on fisheries , though acknowledging that " consideration of ecosystem interactions between fish stocks and cetaceans is a potentially important research topic . "
+
+similarity: 18.19033383453563
+------------------------------------------------
+
+
+17: The finding is a solid piece of research that adds to other vision studies on toads , moths and other animals with a variety of faster , slower or just more sensitive vision that humans , explained vision researcher Fain Gordon of the University of California at Los Angeles .
+
+similarity: 18.70692603431523
+------------------------------------------------
+
+
+18: The research , conducted by the Midwest Business Group on Health , includes some of the nation 's largest employers , such as Boeing Co . , Kraft Foods Inc. and Abbott Laboratories .
+
+similarity: 19.58970436167769
+------------------------------------------------
+
+
+19: " This research helps us to better understand how family dynamics influence development , " said researcher Fritha Milne , a behavioral ecologist at the University of Western Australia .
+
+similarity: 19.907283836689913
+------------------------------------------------

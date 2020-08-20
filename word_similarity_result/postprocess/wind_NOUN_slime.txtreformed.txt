@@ -1,0 +1,465 @@
+ entrain
+ entrain
+ entrain
+ entrain
+ entrain
+ entrain
+ entrain
+ entrain
+ entrain
+ entrain
+ entrain
+ entrain
+ entrain
+ entrain
+ entrain
+ entrain
+ entrain
+ entrain
+ entrain
+ entrain
+ entrain
+ entrain
+ entrain
+ entrain
+ entrain
+ entrain
+ entrain
+ entrain
+ entrain
+ entrain
+ anemometer
+ anemometer
+ anemometer
+ anemometer
+ anemometer
+ anemometer
+ anemometer
+ anemometer
+ anemometer
+ anemometer
+ anemometer
+ anemometer
+ anemometer
+ anemometer
+ anemometer
+ anemometer
+ anemometer
+ anemometer
+ anemometer
+ anemometer
+ anemometer
+ anemometer
+ anemometer
+ anemometer
+ anemometer
+ anemometer
+ anemometer
+ anemometer
+ anemometer
+ hurricane-force
+ hurricane-force
+ hurricane-force
+ hurricane-force
+ hurricane-force
+ hurricane-force
+ hurricane-force
+ hurricane-force
+ hurricane-force
+ hurricane-force
+ hurricane-force
+ hurricane-force
+ hurricane-force
+ hurricane-force
+ hurricane-force
+ hurricane-force
+ hurricane-force
+ hurricane-force
+ hurricane-force
+ hurricane-force
+ hurricane-force
+ hurricane-force
+ hurricane-force
+ hurricane-force
+ hurricane-force
+ hurricane-force
+ hurricane-force
+ hurricane-force
+ upper-level
+ upper-level
+ upper-level
+ upper-level
+ upper-level
+ upper-level
+ upper-level
+ upper-level
+ upper-level
+ upper-level
+ upper-level
+ upper-level
+ upper-level
+ upper-level
+ upper-level
+ upper-level
+ upper-level
+ upper-level
+ upper-level
+ upper-level
+ upper-level
+ upper-level
+ upper-level
+ upper-level
+ upper-level
+ upper-level
+ upper-level
+ gust
+ gust
+ gust
+ gust
+ gust
+ gust
+ gust
+ gust
+ gust
+ gust
+ gust
+ gust
+ gust
+ gust
+ gust
+ gust
+ gust
+ gust
+ gust
+ gust
+ gust
+ gust
+ gust
+ gust
+ gust
+ gust
+ gust
+ gust
+ gust
+ gust
+ gust
+ gust
+ gust
+ gust
+ gust
+ gust
+ gust
+ gust
+ gust
+ gust
+ gust
+ gust
+ gust
+ gust
+ gust
+ gust
+ gust
+ gust
+ gust
+ gust
+ gust
+ Convection
+ Convection
+ Convection
+ Convection
+ Convection
+ Convection
+ Convection
+ Convection
+ Convection
+ Convection
+ Convection
+ Convection
+ Convection
+ Convection
+ Convection
+ Convection
+ Convection
+ Convection
+ Convection
+ Convection
+ Convection
+ Convection
+ Convection
+ Convection
+Tehuantepec
+Tehuantepec
+Tehuantepec
+Tehuantepec
+Tehuantepec
+Tehuantepec
+Tehuantepec
+Tehuantepec
+Tehuantepec
+Tehuantepec
+Tehuantepec
+Tehuantepec
+Tehuantepec
+Tehuantepec
+Tehuantepec
+Tehuantepec
+Tehuantepec
+Tehuantepec
+Tehuantepec
+Tehuantepec
+Tehuantepec
+Tehuantepec
+Tehuantepec
+ 24‑hour
+ 24‑hour
+ 24‑hour
+ 24‑hour
+ 24‑hour
+ 24‑hour
+ 24‑hour
+ 24‑hour
+ 24‑hour
+ 24‑hour
+ 24‑hour
+ 24‑hour
+ 24‑hour
+ 24‑hour
+ 24‑hour
+ 24‑hour
+ 24‑hour
+ 24‑hour
+ 24‑hour
+ 24‑hour
+ 24‑hour
+ 24‑hour
+ swell
+ swell
+ swell
+ swell
+ swell
+ swell
+ swell
+ swell
+ swell
+ swell
+ swell
+ swell
+ swell
+ swell
+ swell
+ swell
+ swell
+ swell
+ swell
+ swell
+ swell
+ Nor'easter
+ Nor'easter
+ Nor'easter
+ Nor'easter
+ Nor'easter
+ Nor'easter
+ Nor'easter
+ Nor'easter
+ Nor'easter
+ Nor'easter
+ Nor'easter
+ Nor'easter
+ Nor'easter
+ Nor'easter
+ Nor'easter
+ Nor'easter
+ Nor'easter
+ Nor'easter
+ Nor'easter
+ Nor'easter
+ llcc
+ llcc
+ llcc
+ llcc
+ llcc
+ llcc
+ llcc
+ llcc
+ llcc
+ llcc
+ llcc
+ llcc
+ llcc
+ llcc
+ llcc
+ llcc
+ llcc
+ llcc
+ llcc
+ above-normal
+ above-normal
+ above-normal
+ above-normal
+ above-normal
+ above-normal
+ above-normal
+ above-normal
+ above-normal
+ above-normal
+ above-normal
+ above-normal
+ above-normal
+ above-normal
+ above-normal
+ above-normal
+ above-normal
+ above-normal
+ disturbance
+ disturbance
+ disturbance
+ disturbance
+ disturbance
+ disturbance
+ disturbance
+ disturbance
+ disturbance
+ disturbance
+ disturbance
+ disturbance
+ disturbance
+ disturbance
+ disturbance
+ disturbance
+ disturbance
+Africa
+Africa
+Africa
+Africa
+Africa
+Africa
+Africa
+Africa
+Africa
+Africa
+Africa
+Africa
+Africa
+Africa
+Africa
+Africa
+ cyclonic
+ cyclonic
+ cyclonic
+ cyclonic
+ cyclonic
+ cyclonic
+ cyclonic
+ cyclonic
+ cyclonic
+ cyclonic
+ cyclonic
+ cyclonic
+ cyclonic
+ cyclonic
+ cyclonic
+ cyclogenesis
+ cyclogenesis
+ cyclogenesis
+ cyclogenesis
+ cyclogenesis
+ cyclogenesis
+ cyclogenesis
+ cyclogenesis
+ cyclogenesis
+ cyclogenesis
+ cyclogenesis
+ cyclogenesis
+ cyclogenesis
+ cyclogenesis
+ gale
+ gale
+ gale
+ gale
+ gale
+ gale
+ gale
+ gale
+ gale
+ gale
+ gale
+ gale
+ gale
+ cold-core
+ cold-core
+ cold-core
+ cold-core
+ cold-core
+ cold-core
+ cold-core
+ cold-core
+ cold-core
+ cold-core
+ cold-core
+ cold-core
+ low-pressure
+ low-pressure
+ low-pressure
+ low-pressure
+ low-pressure
+ low-pressure
+ low-pressure
+ low-pressure
+ low-pressure
+ low-pressure
+ low-pressure
+ gale-force
+ gale-force
+ gale-force
+ gale-force
+ gale-force
+ gale-force
+ gale-force
+ gale-force
+ gale-force
+ gale-force
+ sheared
+ sheared
+ sheared
+ sheared
+ sheared
+ sheared
+ sheared
+ sheared
+ sheared
+ ITCZ
+ ITCZ
+ ITCZ
+ ITCZ
+ ITCZ
+ ITCZ
+ ITCZ
+ ITCZ
+Channel
+Channel
+Channel
+Channel
+Channel
+Channel
+Channel
+ intertropical
+ intertropical
+ intertropical
+ intertropical
+ intertropical
+ intertropical
+ anticyclone
+ anticyclone
+ anticyclone
+ anticyclone
+ anticyclone
+ near-record
+ near-record
+ near-record
+ near-record
+ landfalling
+ landfalling
+ landfalling
+ unseasonable
+ unseasonable
+ squall

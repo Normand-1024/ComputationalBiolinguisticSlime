@@ -1,0 +1,84 @@
+Finding similarity for word: The research team are to publish their findings in the Astrophysical Journal .
+
+Coordinate: [ 70.14081049 120.80847931  10.8237648 ]
+Difference of Similarity with limit of 20:
+Therefore , climate experts can 't leave themselves vulnerable by citing non-peer-reviewed research or failing to respond to legitimate questions , some of which happened with both the Climatic Research Unit at the University of East Anglia and the United Nations Intergovernmental Panel on Climate Change .
+
+Difference: 12, Rank1: 3, Rank2: 15
+--------------------------------
+Ultimately , they hope this research will lead to treatments for a number of mental ailments .
+
+Difference: 6, Rank1: 14, Rank2: -1
+--------------------------------
+Very interesting research .
+
+Difference: 5, Rank1: 5, Rank2: 10
+--------------------------------
+The research was published in the journal Optics Communications .
+
+Difference: 5, Rank1: 7, Rank2: 2
+--------------------------------
+The research , published in the Archives of Disease in Childhood , was carried out by experts at the University of Alberta in Canada .
+
+Difference: 4, Rank1: 12, Rank2: 8
+--------------------------------
+20 / PRNewswire-USNewswire / -- Dr. Jeremy Schmahmann , Professor of Neurology at Harvard Medical School and neurologist at the Massachusetts General Hospital in Boston , on Thursday , November 19 , presented his laboratory 's research on the new field of study called " Connectivity " at the launch of the MINDlink Foundation .
+
+Difference: 4, Rank1: 13, Rank2: 9
+--------------------------------
+Critics , however , said the new research contradicts basic facts of human genetics .
+
+Difference: 4, Rank1: 15, Rank2: 11
+--------------------------------
+The scientists believe further research will also provide an insight into how our relationship with music evolved .
+
+Difference: 4, Rank1: 16, Rank2: -1
+--------------------------------
+Gero Miesenboeck , from Oxford University , UK , who carried out the research with J. Dylan Clyne from Yale University , US , said : " It is often the case that males have to work very hard to convince females to mate with them .
+
+Difference: 4, Rank1: 17, Rank2: 13
+--------------------------------
+Its findings and those of other research reports follow .
+
+Difference: 3, Rank1: 0, Rank2: 3
+--------------------------------
+Visit http : / / www3.best-in-class.com / gr191.htm to sign up for a Live Virtual Presentation of this primary research .
+
+Difference: 3, Rank1: 2, Rank2: 5
+--------------------------------
+The research is to appear in the German journal Naturwissenschaften .
+
+Difference: 3, Rank1: 4, Rank2: 1
+--------------------------------
+Depending on how much time is available , you might have each group give a presentation or share three to five of its best ideas from its research .
+
+Difference: 3, Rank1: 9, Rank2: 12
+--------------------------------
+The research that included Yan Hu and Audrey Bellier in Aroian 's group and Professor Edward Platzer at the University of California-Riverside appeared in last week 's early online edition of the Proceedings of the National Academy of Sciences .
+
+Difference: 3, Rank1: 10, Rank2: 7
+--------------------------------
+They will be collating the results of existing research on the issue .
+
+Difference: 3, Rank1: 11, Rank2: 14
+--------------------------------
+Three years earlier , the IWC 's scientific committee had concluded there was no way of providing reliable advice on the impacts of cetaceans on fisheries , though acknowledging that " consideration of ecosystem interactions between fish stocks and cetaceans is a potentially important research topic . "
+
+Difference: 3, Rank1: 19, Rank2: 16
+--------------------------------
+The finding is a solid piece of research that adds to other vision studies on toads , moths and other animals with a variety of faster , slower or just more sensitive vision that humans , explained vision researcher Fain Gordon of the University of California at Los Angeles .
+
+Difference: 3, Rank1: -1, Rank2: 17
+--------------------------------
+The complex research -- conducted at more than 100 institutions in 16 nations and led by the Agencourt Bioscience Corp. of Beverly , Mass . -- was reported earlier this month in the journal Nature .
+
+Difference: 2, Rank1: 6, Rank2: 4
+--------------------------------
+The research was presented at this week 's BA Science Festival .
+
+Difference: 2, Rank1: 8, Rank2: 6
+--------------------------------
+We need more research , which will be expensive .
+
+Difference: 2, Rank1: 18, Rank2: -1
+--------------------------------

@@ -1,0 +1,91 @@
+Difference of Similarity with limit of 30: 
+unobtainable_ADJ
+Difference: 435, Rank1: 29, Rank2: 464, Sim1: 2196, Sim2: 0.9982728754948257
+--------------------------------
+partially_ADV
+Difference: 381, Rank1: 27, Rank2: 408, Sim1: 2281, Sim2: 0.9984632466056508
+--------------------------------
+undesired_ADJ
+Difference: 304, Rank1: 24, Rank2: 328, Sim1: 2383, Sim2: 0.998814030131418
+--------------------------------
+entirely_ADV
+Difference: 297, Rank1: 12, Rank2: 309, Sim1: 3170, Sim2: 0.998871488328021
+--------------------------------
+intractable_ADJ
+Difference: 261, Rank1: 28, Rank2: 289, Sim1: 2225, Sim2: 0.9989384507427961
+--------------------------------
+unheard_ADJ
+Difference: 258, Rank1: 22, Rank2: 280, Sim1: 2449, Sim2: 0.9989724490288683
+--------------------------------
+couple_VERB
+Difference: 240, Rank1: 23, Rank2: 263, Sim1: 2445, Sim2: 0.9990456022562754
+--------------------------------
+cumbersome_ADJ
+Difference: 238, Rank1: 13, Rank2: 251, Sim1: 3053, Sim2: 0.9990820013802914
+--------------------------------
+rare_ADJ
+Difference: 237, Rank1: 20, Rank2: 257, Sim1: 2668, Sim2: 0.9990585609531252
+--------------------------------
+commonest_ADJ
+Difference: 225, Rank1: 16, Rank2: 241, Sim1: 2804, Sim2: 0.9991027787674677
+--------------------------------
+unsuitable_ADJ
+Difference: 213, Rank1: 11, Rank2: 224, Sim1: 3760, Sim2: 0.9991393682200778
+--------------------------------
+advantageously_ADV
+Difference: 196, Rank1: 26, Rank2: 222, Sim1: 2336, Sim2: 0.9991444844901556
+--------------------------------
+contributing_ADJ
+Difference: 181, Rank1: 6, Rank2: 187, Sim1: 6789, Sim2: 0.9993191243834376
+--------------------------------
+inconvenient_ADJ
+Difference: 181, Rank1: 14, Rank2: 195, Sim1: 2993, Sim2: 0.9992853433545736
+--------------------------------
+unsuited_ADJ
+Difference: 179, Rank1: 5, Rank2: 184, Sim1: 7002, Sim2: 0.9993406511124178
+--------------------------------
+ideally_ADV
+Difference: 153, Rank1: 18, Rank2: 171, Sim1: 2744, Sim2: 0.9993901433179577
+--------------------------------
+unreliable_ADJ
+Difference: 150, Rank1: 8, Rank2: 158, Sim1: 4927, Sim2: 0.9994385460814169
+--------------------------------
+nonexistent_ADJ
+Difference: 149, Rank1: 19, Rank2: 168, Sim1: 2711, Sim2: 0.9994013083788905
+--------------------------------
+unreliability_NOUN
+Difference: 108, Rank1: 9, Rank2: 117, Sim1: 4404, Sim2: 0.9995809306360498
+--------------------------------
+detrimentally_ADV
+Difference: 108, Rank1: 17, Rank2: 125, Sim1: 2771, Sim2: 0.9995471317582018
+--------------------------------
+amenable_ADJ
+Difference: 107, Rank1: 15, Rank2: 122, Sim1: 2987, Sim2: 0.9995591004644896
+--------------------------------
+rarer_ADJ
+Difference: 91, Rank1: 1, Rank2: 92, Sim1: 8232, Sim2: 0.9996649947747814
+--------------------------------
+enrich_VERB
+Difference: 78, Rank1: 25, Rank2: 103, Sim1: 2349, Sim2: 0.9996184916499812
+--------------------------------
+rarest_ADJ
+Difference: 66, Rank1: 2, Rank2: 68, Sim1: 8066, Sim2: 0.9997529605942812
+--------------------------------
+extensive_ADJ
+Difference: 64, Rank1: 7, Rank2: 71, Sim1: 6448, Sim2: 0.9997445614297705
+--------------------------------
+detrimental_ADJ
+Difference: 23, Rank1: 0, Rank2: 23, Sim1: 9829, Sim2: 0.9999101209569793
+--------------------------------
+non-essential_ADJ
+Difference: 22, Rank1: 10, Rank2: 32, Sim1: 4139, Sim2: 0.9998772514476637
+--------------------------------
+suitable_ADJ
+Difference: 21, Rank1: 21, Rank2: 42, Sim1: 2482, Sim2: 0.9998532518146446
+--------------------------------
+unbalanced_ADJ
+Difference: 5, Rank1: 3, Rank2: 8, Sim1: 7906, Sim2: 0.9999762783399226
+--------------------------------
+driven_ADJ
+Difference: 3, Rank1: 4, Rank2: 1, Sim1: 7785, Sim2: 0.9999959844225769
+--------------------------------

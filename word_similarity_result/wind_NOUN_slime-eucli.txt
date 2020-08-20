@@ -1,0 +1,91 @@
+Difference of Similarity with limit of 30: 
+unseasonable_ADJ
+Difference: 243, Rank1: 28, Rank2: 271, Sim1: 2225, Sim2: 4.1251189485467314
+--------------------------------
+near-record_ADJ
+Difference: 236, Rank1: 26, Rank2: 262, Sim1: 2500, Sim2: 3.8096967127446173
+--------------------------------
+anticyclone_ADJ
+Difference: 40, Rank1: 25, Rank2: 65, Sim1: 2523, Sim2: 1.8272805744013805
+--------------------------------
+intertropical_ADJ
+Difference: 20, Rank1: 24, Rank2: 44, Sim1: 2653, Sim2: 1.5247332599861656
+--------------------------------
+squall_NOUN
+Difference: 20, Rank1: 29, Rank2: 49, Sim1: 2160, Sim2: 1.5952146894974195
+--------------------------------
+ITCZ_PROPN
+Difference: 17, Rank1: 22, Rank2: 39, Sim1: 2955, Sim2: 1.4200524231278504
+--------------------------------
+sheared_ADJ
+Difference: 16, Rank1: 21, Rank2: 37, Sim1: 3299, Sim2: 1.3267798590708348
+--------------------------------
+low-pressure_ADJ
+Difference: 15, Rank1: 19, Rank2: 34, Sim1: 4453, Sim2: 1.1230971772282383
+--------------------------------
+landfalling_ADJ
+Difference: 15, Rank1: 27, Rank2: 42, Sim1: 2367, Sim2: 1.4969243566513901
+--------------------------------
+west::coast::of::Africa_PROPN
+Difference: 13, Rank1: 14, Rank2: 27, Sim1: 6282, Sim2: 0.9814214854494474
+--------------------------------
+cyclogenesis_NOUN
+Difference: 13, Rank1: 16, Rank2: 29, Sim1: 5108, Sim2: 1.0005948771010345
+--------------------------------
+cold-core_NOUN
+Difference: 13, Rank1: 18, Rank2: 31, Sim1: 5005, Sim2: 1.041734072578713
+--------------------------------
+gale-force_NOUN
+Difference: 13, Rank1: 20, Rank2: 33, Sim1: 3468, Sim2: 1.0829118308934542
+--------------------------------
+Mozambique::Channel_PROPN
+Difference: 13, Rank1: 23, Rank2: 36, Sim1: 2666, Sim2: 1.2983293076125981
+--------------------------------
+above-normal_ADJ
+Difference: 12, Rank1: 12, Rank2: 24, Sim1: 6883, Sim2: 0.9477862710162835
+--------------------------------
+cyclonic_ADJ
+Difference: 11, Rank1: 15, Rank2: 26, Sim1: 5445, Sim2: 0.977669967370576
+--------------------------------
+gale_NOUN
+Difference: 11, Rank1: 17, Rank2: 28, Sim1: 5102, Sim2: 0.9850050625225463
+--------------------------------
+disturbance_NOUN
+Difference: 10, Rank1: 13, Rank2: 23, Sim1: 6515, Sim2: 0.9388438734345304
+--------------------------------
+Convection_PROPN
+Difference: 8, Rank1: 6, Rank2: 14, Sim1: 8925, Sim2: 0.6399472162035258
+--------------------------------
+llcc_NOUN
+Difference: 8, Rank1: 11, Rank2: 19, Sim1: 7528, Sim2: 0.8053881962477474
+--------------------------------
+upper-level_ADJ
+Difference: 7, Rank1: 3, Rank2: 10, Sim1: 9161, Sim2: 0.5379993340144543
+--------------------------------
+swell_NOUN
+Difference: 7, Rank1: 9, Rank2: 16, Sim1: 8619, Sim2: 0.7569807853039835
+--------------------------------
+Nor'easter_PROPN
+Difference: 7, Rank1: 10, Rank2: 17, Sim1: 8258, Sim2: 0.7598661408917714
+--------------------------------
+entrain_VERB
+Difference: 6, Rank1: 0, Rank2: 6, Sim1: 9617, Sim2: 0.49564089087600394
+--------------------------------
+Gulf::of::Tehuantepec_PROPN
+Difference: 5, Rank1: 7, Rank2: 12, Sim1: 8902, Sim2: 0.6066986679691565
+--------------------------------
+anemometer_NOUN
+Difference: 4, Rank1: 1, Rank2: 5, Sim1: 9442, Sim2: 0.4609149885484435
+--------------------------------
+gust_NOUN
+Difference: 4, Rank1: 4, Rank2: 8, Sim1: 9036, Sim2: 0.5005647928571797
+--------------------------------
+gust_VERB
+Difference: 2, Rank1: 5, Rank2: 7, Sim1: 9004, Sim2: 0.49971423843041113
+--------------------------------
+24‑hour_ADJ
+Difference: 1, Rank1: 8, Rank2: 9, Sim1: 8629, Sim2: 0.5234766887460709
+--------------------------------
+hurricane-force_ADJ
+Difference: 0, Rank1: 2, Rank2: 2, Sim1: 9246, Sim2: 0.3907138654457556
+--------------------------------

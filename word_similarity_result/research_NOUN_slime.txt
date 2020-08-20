@@ -1,0 +1,91 @@
+Similarity Ranking:
+0: wellness_NOUN
+similarity: 9514
+--------------------------------
+1: Deficiency_PROPN
+similarity: 9303
+--------------------------------
+2: applied_ADJ
+similarity: 9272
+--------------------------------
+3: evidence-based_ADJ
+similarity: 8646
+--------------------------------
+4: health-related_ADJ
+similarity: 8531
+--------------------------------
+5: brainstorm_VERB
+similarity: 8426
+--------------------------------
+6: brainstorm_NOUN
+similarity: 8252
+--------------------------------
+7: reread_VERB
+similarity: 7822
+--------------------------------
+8: re-read_VERB
+similarity: 7409
+--------------------------------
+9: together_PART
+similarity: 7304
+--------------------------------
+10: patient-centered_ADJ
+similarity: 7029
+--------------------------------
+11: public-health_ADJ
+similarity: 6605
+--------------------------------
+12: place-based_ADJ
+similarity: 6342
+--------------------------------
+13: wellness_ADJ
+similarity: 4525
+--------------------------------
+14: science-based_ADJ
+similarity: 3420
+--------------------------------
+15: health_NOUN
+similarity: 2919
+--------------------------------
+16: activity-based_ADJ
+similarity: 2821
+--------------------------------
+17: ebp_NOUN
+similarity: 2773
+--------------------------------
+18: ohp_NOUN
+similarity: 2621
+--------------------------------
+19: end-of-life_NOUN
+similarity: 2236
+--------------------------------
+20: experience-based_ADJ
+similarity: 2185
+--------------------------------
+21: aftercare_ADJ
+similarity: 2159
+--------------------------------
+22: gerontological_ADJ
+similarity: 2123
+--------------------------------
+23: domiciliary_ADJ
+similarity: 2113
+--------------------------------
+24: referral_NOUN
+similarity: 2037
+--------------------------------
+25: home-based_ADJ
+similarity: 1870
+--------------------------------
+26: brainstorming_NOUN
+similarity: 1636
+--------------------------------
+27: individualize_VERB
+similarity: 1568
+--------------------------------
+28: problem-based_ADJ
+similarity: 1549
+--------------------------------
+29: inquiry-based_ADJ
+similarity: 1543
+--------------------------------

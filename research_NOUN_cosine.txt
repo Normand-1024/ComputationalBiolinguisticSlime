@@ -1,0 +1,91 @@
+Similarity Ranking:
+0: The Great Mosque of Córdoba dates back to this time.
+similarity: 0.9999966758770341
+--------------------------------
+1: Some cities such as Linz (''Lentos'') date back to this period also.
+similarity: 0.9999920335896813
+--------------------------------
+2: He argued that it was this economic trade agreement dating back to the 16th century that led to Africa being underdeveloped in his own time.
+similarity: 0.9999839138640982
+--------------------------------
+3: An example is the internal passport of Russia or certain other post-Soviet countries dating back to imperial times.
+similarity: 0.9999773382790293
+--------------------------------
+4: The earliest written references to the islands date back to Roman times.
+similarity: 0.9999654187748194
+--------------------------------
+5: The first examples of the pointed arch in the European architecture are in Sicily and date back to the Arab-Norman period.
+similarity: 0.9999621891379543
+--------------------------------
+6:  ===Saint-Médard Abbey=== The Saint-Médard Abbey was a Benedictine monastery of Soissons whose foundation went back to the sixth century.
+similarity: 0.9999576643841726
+--------------------------------
+7: The first evidence for stone- or weight-throwing events were in the Scottish Highlands, and date back to approximately the first century.
+similarity: 0.9999563348865947
+--------------------------------
+8: In Curaçao there was a strong Jewish element going back to the 17th century.
+similarity: 0.999955784060206
+--------------------------------
+9:  ===San Antonio Spurs===  The Grizzlies rivalry with the Spurs goes way back in 2004, when the Spurs swept the Grizzlies in the first round.
+similarity: 0.9999544721542042
+--------------------------------
+10: Also terminated was the ''bey'', a quasi-monarchist institution dating back to Ottoman rule.
+similarity: 0.9999460590968816
+--------------------------------
+11: ‘alī Mas‘ūd, date back to at least 1200 CE.
+similarity: 0.9999395939279266
+--------------------------------
+12: Most of the historical center of Wiesbaden dates back to this time.
+similarity: 0.9999295700310131
+--------------------------------
+13: * The earliest known settlement in Plymouth, England dates back to this era.
+similarity: 0.9999262102498414
+--------------------------------
+14:  The first Christianized adaptation was the Georgian epic ''Balavariani'' dating back to the 10th century.
+similarity: 0.999921713562661
+--------------------------------
+15: Some trams (that date back the 30s) charge a pound.
+similarity: 0.9999164897539062
+--------------------------------
+16: The earliest traces of the Babylonian numerals also date back to this period.
+similarity: 0.9999160233690738
+--------------------------------
+17: The chain was the product of a British tradition dating back to pre-Roman times.
+similarity: 0.999908408692554
+--------------------------------
+18: The English sought to stake out claims in India at the expense of the Portuguese dating back to the Elizabethan era.
+similarity: 0.9999073158434899
+--------------------------------
+19: The earliest traces of the Babylonian numerals also date back to this period.
+similarity: 0.9999058993253404
+--------------------------------
+20: Grounded in uncodified civil law dating back to the ''Corpus Juris Civilis'', it also features elements of common law with medieval sources.
+similarity: 0.9999051467855353
+--------------------------------
+21:  === The Jewish Population === The first known Jews in Lviv date back to the 10th century.
+similarity: 0.9999027081108073
+--------------------------------
+22: Its history stretches back to the 9th century.
+similarity: 0.9998956520079592
+--------------------------------
+23: Other early compositions, such as the melody of ''Bogurodzica'', may also date back to this period.
+similarity: 0.9998931703617291
+--------------------------------
+24: What is most likely the oldest preserved drawing dates back to the early microscopist Antonie van Leeuwenhoek (1632–1723).
+similarity: 0.9998875448880532
+--------------------------------
+25: The oldest parts of the canal date back to the 5th century BC, but the various sections were first connected during the Sui dynasty (581–618 AD).
+similarity: 0.999878584031795
+--------------------------------
+26: The term can be found in various pre-modern Malay texts, of which the oldest dating back to the early 17th century.
+similarity: 0.9998728723153972
+--------------------------------
+27: It dates back to at least the Song dynasty.
+similarity: 0.9998721421220464
+--------------------------------
+28: There are records of Siberian tribal healing practices dating back to the 13th century.
+similarity: 0.9998586595687982
+--------------------------------
+29: An early record of a seconds hand on a clock dates back to about 1560 on a clock now in the Fremersdorf collection.
+similarity: 0.9998586421389258
+--------------------------------

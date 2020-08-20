@@ -1,0 +1,91 @@
+Difference of Similarity with limit of 30: 
+problem-based_ADJ
+Difference: 17, Rank1: 28, Rank2: 45, Sim1: 1549, Sim2: 1.8734472615910622
+--------------------------------
+inquiry-based_ADJ
+Difference: 14, Rank1: 29, Rank2: 43, Sim1: 1543, Sim2: 1.8331919744695215
+--------------------------------
+referral_NOUN
+Difference: 8, Rank1: 24, Rank2: 32, Sim1: 2037, Sim2: 1.6256578591606674
+--------------------------------
+gerontological_ADJ
+Difference: 3, Rank1: 22, Rank2: 25, Sim1: 2123, Sim2: 1.4831823309436576
+--------------------------------
+brainstorming_NOUN
+Difference: 3, Rank1: 26, Rank2: 23, Sim1: 1636, Sim2: 1.428134182212625
+--------------------------------
+individualize_VERB
+Difference: 3, Rank1: 27, Rank2: 24, Sim1: 1568, Sim2: 1.4346124339399853
+--------------------------------
+domiciliary_ADJ
+Difference: 2, Rank1: 23, Rank2: 21, Sim1: 2113, Sim2: 1.38056015254428
+--------------------------------
+home-based_ADJ
+Difference: 2, Rank1: 25, Rank2: 27, Sim1: 1870, Sim2: 1.5153183341611722
+--------------------------------
+Deficiency_PROPN
+Difference: 1, Rank1: 1, Rank2: 2, Sim1: 9303, Sim2: 0.47825562427469703
+--------------------------------
+applied_ADJ
+Difference: 1, Rank1: 2, Rank2: 1, Sim1: 9272, Sim2: 0.4667773035590928
+--------------------------------
+evidence-based_ADJ
+Difference: 1, Rank1: 3, Rank2: 4, Sim1: 8646, Sim2: 0.636172982129864
+--------------------------------
+health-related_ADJ
+Difference: 1, Rank1: 4, Rank2: 3, Sim1: 8531, Sim2: 0.5971039107494276
+--------------------------------
+patient-centered_ADJ
+Difference: 1, Rank1: 10, Rank2: 11, Sim1: 7029, Sim2: 0.9331778502778285
+--------------------------------
+public-health_ADJ
+Difference: 1, Rank1: 11, Rank2: 10, Sim1: 6605, Sim2: 0.9176678773057628
+--------------------------------
+science-based_ADJ
+Difference: 1, Rank1: 14, Rank2: 15, Sim1: 3420, Sim2: 1.1555563448062072
+--------------------------------
+health_NOUN
+Difference: 1, Rank1: 15, Rank2: 14, Sim1: 2919, Sim2: 1.0791702147298314
+--------------------------------
+activity-based_ADJ
+Difference: 1, Rank1: 16, Rank2: 17, Sim1: 2821, Sim2: 1.1647520006141465
+--------------------------------
+ebp_NOUN
+Difference: 1, Rank1: 17, Rank2: 16, Sim1: 2773, Sim2: 1.1579772892950775
+--------------------------------
+end-of-life_NOUN
+Difference: 1, Rank1: 19, Rank2: 20, Sim1: 2236, Sim2: 1.3005263624924241
+--------------------------------
+experience-based_ADJ
+Difference: 1, Rank1: 20, Rank2: 19, Sim1: 2185, Sim2: 1.263332567073446
+--------------------------------
+aftercare_ADJ
+Difference: 1, Rank1: 21, Rank2: 22, Sim1: 2159, Sim2: 1.4242400262479176
+--------------------------------
+wellness_NOUN
+Difference: 0, Rank1: 0, Rank2: 0, Sim1: 9514, Sim2: 0.38504070683305003
+--------------------------------
+brainstorm_VERB
+Difference: 0, Rank1: 5, Rank2: 5, Sim1: 8426, Sim2: 0.6875048301759692
+--------------------------------
+brainstorm_NOUN
+Difference: 0, Rank1: 6, Rank2: 6, Sim1: 8252, Sim2: 0.7666516876279905
+--------------------------------
+reread_VERB
+Difference: 0, Rank1: 7, Rank2: 7, Sim1: 7822, Sim2: 0.8410377833507043
+--------------------------------
+re-read_VERB
+Difference: 0, Rank1: 8, Rank2: 8, Sim1: 7409, Sim2: 0.8606298107962705
+--------------------------------
+together_PART
+Difference: 0, Rank1: 9, Rank2: 9, Sim1: 7304, Sim2: 0.9156441603397278
+--------------------------------
+place-based_ADJ
+Difference: 0, Rank1: 12, Rank2: 12, Sim1: 6342, Sim2: 0.9645956157282966
+--------------------------------
+wellness_ADJ
+Difference: 0, Rank1: 13, Rank2: 13, Sim1: 4525, Sim2: 1.0144913027079174
+--------------------------------
+ohp_NOUN
+Difference: 0, Rank1: 18, Rank2: 18, Sim1: 2621, Sim2: 1.1751215659793142
+--------------------------------
