@@ -11,6 +11,8 @@
 # Note: Tested random function for 64 * 50000 threads, the distribution looks pretty good
 
 import random
+import math
+import re
 import numpy as np
 from scipy import spatial
 import matplotlib.pyplot as plt
@@ -29,7 +31,7 @@ from simulation import Agent, SlimeSimulation
 from deposit_reader import DATA_PATH, Deposit
 
 # >>> Macro Variables <<<
-BLOCKDIM = (64, 1, 1)
+BLOCKDIM = (256, 1, 1)
 AGENT_POS, AGENT_DIR = range(2)
 SENSE_ANGLE, SENSE_DIST,\
  SHARPNESS, MOVE_ANGLE, MOVE_DISTANCE = range(5)
@@ -37,19 +39,23 @@ SENSE_ANGLE, SENSE_DIST,\
 # >>> Help functions <<<
 def get_agent_array(list_of_agents):
     agent_array = np.zeros((len(list_of_agents), 2, 3))
-    
+
     for i in range(len(list_of_agents)):
         agent_array[i][AGENT_POS] = list_of_agents[i].pos
         agent_array[i][AGENT_DIR] = list_of_agents[i].dir
 
     return agent_array.astype(np.float32)
 
-def array_to_cuda(nparray):
+def array_to_cuda(nparray, if_surface=False):
     descr = cuda.ArrayDescriptor3D()
 
     descr.width, descr.height, descr.depth = nparray.shape[:3]
     descr.format = cuda.dtype_to_array_format(nparray.dtype)
     descr.num_channels = 1
+
+    if if_surface:
+        descr.flags  = cuda.array3d_flags.SURFACE_LDST
+
     ary = cuda.Array(descr)
 
     copy = cuda.Memcpy3D()
@@ -63,17 +69,32 @@ def array_to_cuda(nparray):
 
     return ary
 
+def slugify(value):
+    value = re.sub('[^\w\-_\. ]', '_', value)
+    return value
+
 # >>> Main Simulation <<<
 class CUDA_slime:
     def __init__(self, deposit, agent_array,\
+                    point_coord, point_info,\
                     grid_res, grid_size,\
-                    parameter):
+                    parameter,\
+                    ranking_threshold=10):
+        self.ranking_threshold = ranking_threshold
         self.blockdim = (64, 1, 1)
         self.deposit = deposit
         self.agent_array = agent_array
         self.grid_res = grid_res
         self.grid_size = grid_size
         self.parameter = parameter
+        self.agent_trace = []
+        self.agent_trace_texture = np.zeros(
+                    (deposit.shape[2], deposit.shape[1], deposit.shape[0]),
+                     dtype=np.int32)
+        self.point_coord, self.point_info = point_coord, point_info
+        self.point_coord = np.array(point_coord, dtype=np.float32)
+        self.similarity_rank = np.zeros(
+            (len(self.point_info),), dtype=np.int32)
 
         sourceFile = open("CUDAstep.cpp")
         self.mod = SourceModule(sourceFile.read())
@@ -85,8 +106,9 @@ class CUDA_slime:
         self.deposit_texture.set_address_mode(1, cuda.address_mode.CLAMP)
         self.deposit_texture.set_address_mode(2, cuda.address_mode.CLAMP)
         self.deposit_texture.set_filter_mode(cuda.filter_mode.LINEAR)
+        #self.deposit_texture.set_flags(cuda.TRSF_NORMALIZED_COORDINATES)
 
-    def step(self):
+    def step(self, add_trace=True):
         agentNum = np.int32(self.agent_array.shape[0])
         self.slimePropagate(cuda.InOut(self.agent_array), agentNum,\
              cuda.In(self.grid_res), cuda.In(self.grid_size),\
@@ -94,6 +116,62 @@ class CUDA_slime:
              texrefs=[self.deposit_texture],\
              block=self.blockdim, \
              grid=(int(agentNum // self.blockdim[0] + 1),1))
+
+        if (add_trace):
+            for agent in self.agent_array:
+                self.agent_trace += [agent[0].copy()] 
+
+    def recordTrace(self):
+        self.recordTrace = self.mod.get_function("recordTrace")
+        self.deposit_texture = None
+
+        self.agent_trace = np.array(self.agent_trace, dtype=np.float32)
+        agentNum = np.int32(self.agent_array.shape[0])
+        traceLen = np.int32(len(self.agent_trace))
+        traceshape = np.int32(self.agent_trace_texture.shape)
+        worldToGridRatio = np.float32(self.grid_res[0] / self.grid_size[0])
+
+        self.recordTrace(cuda.In(self.agent_trace), traceLen,\
+                 worldToGridRatio,\
+                 cuda.InOut(self.agent_trace_texture), \
+                 traceshape[2], traceshape[1],\
+                cuda.In(traceshape),\
+                 block=self.blockdim, \
+                 grid=(int(agentNum // self.blockdim[0] + 1),1))
+
+    def generateSimilarity(self, sense_dist = 1):
+        self.generateSimilairy = self.mod.get_function("generateSimilairy")
+
+        worldToGridRatio = np.float32(self.grid_res[0] / self.grid_size[0])
+        grid_sense_dist = np.int32(np.ceil(sense_dist * worldToGridRatio))
+        agentNum = np.int32(self.agent_array.shape[0])
+        traceshape = np.int32(self.agent_trace_texture.shape)
+
+        self.generateSimilairy(
+                 cuda.InOut(self.similarity_rank),\
+                 cuda.In(self.point_coord),\
+                 np.int32(len(self.point_coord)), grid_sense_dist,\
+                 cuda.In(self.agent_trace_texture),\
+                 worldToGridRatio,\
+                 traceshape[2], traceshape[1], traceshape[0],\
+                 block=self.blockdim, \
+                 grid=(int(agentNum // self.blockdim[0] + 1),1))
+
+    def getSimilarityRank(self, sort = True, reverse = True):
+        ranking = []
+        for i in range(len(self.similarity_rank)):
+            if (self.similarity_rank[i] >= self.ranking_threshold):
+                ranking.append((i, self.similarity_rank[i]))
+        if sort:
+            ranking.sort(reverse=reverse, key=lambda x: x[1])
+        return ranking
+        
+    def writeSimilarity(self, filename):
+        with open(filename, 'w+', encoding='utf-8') as f:
+            for i in range(len(self.similarity_rank)):
+                if (self.similarity_rank[i] >= self.ranking_threshold):
+                    f.write(self.point_info[i] + '\n' +\
+                        str(self.similarity_rank[i]) + '\n')
 
 # ================
 # MAIN HERE
@@ -103,7 +181,6 @@ if __name__ == "__main__":
     depo = Deposit(DATA_PATH)
     simu = SlimeSimulation(depo)
     simu.initialize_agents(num_agents=300, spawn_at=simu.depo.point_coord[0])
-    print("Spawn at: ", simu.depo.point_coord[3])
 
     grid_res = depo.grid_res.astype(np.int32) # unadjusted, dimension of the grid in array coordinate
     grid_size = depo.grid_size.astype(np.float32) # unadjusted, dimension of the grid in world coordinate
@@ -119,9 +196,34 @@ if __name__ == "__main__":
     deposit = np.squeeze(depo.deposit.astype(np.float32), axis=3)
     em = np.array([])
 
+    print("Grid Size: ", grid_size)
+    print("Grid Res: ", grid_res)
+    print("Grid Ratio: ", grid_ratio)
+
+    #print("In Python: \n  Position: ", agent_array[0][0], "\n  Deposit: ", depo.get_deposit(agent_array[0][0]))
+    p0 = simu.depo.get_deposit(agent_array[0][0] + agent_array[0][1] * depo.params["sense_distance"])
     slime = CUDA_slime(deposit, agent_array,\
+        depo.point_coord, depo.point_info,\
         grid_res, grid_size,\
         parameter)
-    slime.step()
+    for i in range(500):
+        slime.step()
+    slime.recordTrace()
+    slime.generateSimilarity()
+    slime.outputSimilarity("1111.txt")
+    for i, item in enumerate(slime.similarity_rank):
+        if item > 0:
+            print(depo.point_info[i], " ", item, " ", depo.point_coord[i])
+            
+    print(">>>>>", depo.point_info[0], " ", slime.similarity_rank[0], " ", depo.point_coord[0])
+
+    point = np.int32(np.floor(simu.depo.point_coord[0] * depo.grid_ratio))
+    lowerb = math.floor((simu.depo.point_coord[0][2] - 10) * depo.grid_ratio)
+    upperb = math.floor((simu.depo.point_coord[0][2] + 10) * depo.grid_ratio)
+    trace_tex = slime.agent_trace_texture[:,:,lowerb : upperb]
+    print(np.sum(trace_tex))
+    trace_tex = np.sum(trace_tex, axis=2)
+    plt.imshow(trace_tex, origin='lower')
+    plt.show()  
 
     exit()

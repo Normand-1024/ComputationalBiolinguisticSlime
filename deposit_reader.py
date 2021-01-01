@@ -7,7 +7,7 @@ from ipywidgets import interact
 from util import lerp, trilerp_deposit
 
 DATA_NAME =  '2020-05-01/global' #'back_trace' #
-SCALING_FACTOR = 10 #for local #20 # for local 10
+SCALING_FACTOR = 10 #for local #20 # for global 10
 DATA_PATH = 'data/' + DATA_NAME
 
 # scaling: local = 20, global = 10
@@ -53,7 +53,8 @@ class Deposit:
                 self.grid_res[1],\
                 self.grid_res[0],\
                 self.n_channels) # Notice that x and z axis are switched
-        self.point_coord, self.point_info = self.read_point_data()
+        self.point_coord, self.point_info, self.point_weight \
+             = self.read_point_data()
 
         # point_grid and sorted_point are for detecting agents passing through data points
         self.point_grid, self.sorted_point = self.preprocess_ptdata(downsample=2)
@@ -157,6 +158,7 @@ class Deposit:
     def read_point_data(self, dimension=3):
         point_coord = []
         point_info = []
+        point_weight = []
 
         # Read point data
         with open(self.data_path + '/pt_data') as pt_data:
@@ -177,12 +179,15 @@ class Deposit:
                         if info[-1] == '\n':
                             info = info[:-1]
 
-                        point_coord.append(coord)
+                        point_coord.append(coord[:3])
                         point_info.append(info)
+
+                        if len(coord) == 4:
+                            point_weight.append(coord[4])
                         
                     pt_info_data.readline()
 
-        return [point_coord, point_info]
+        return [point_coord, point_info, point_weight]
     
     def adjust_coord(self, coord):
         return coord * SCALING_FACTOR - self.params['min']

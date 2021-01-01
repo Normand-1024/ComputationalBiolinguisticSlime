@@ -78,19 +78,30 @@ deposit = np.squeeze(depo.deposit.astype(np.float32), axis=3)
 # CUDA Slime Simulation Main
 x_t, y_t, z_t = [], [], []
 slime_sim = CUDA_slime(deposit, agent_array,\
+            depo.point_coord, depo.point_info,\
             grid_res, grid_size,\
             parameter)
 
-total_step = 500
+total_step = 1500
+reset_step = 500
 for i in range(total_step):
-    #print(i, ' / ', total_step, end='\r')
+    print(i, ' / ', total_step, end='\r')
     slime_sim.step()
-
     for agent in slime_sim.agent_array:
-        x_t += [agent[0][0]]
-        y_t += [agent[0][1]]
-        z_t += [agent[0][2]]
-        
+        if (agent[0][2] < slice_front and\
+                 agent[0][2] > slice_back):
+            x_t += [agent[0][0]]
+            y_t += [agent[0][1]]
+            z_t += [agent[0][2]]
+
+    if i % 500 == 0:
+        for agent in slime_sim.agent_array:
+            agent[0][0] = spawn_point[0]
+            agent[0][1] = spawn_point[1]
+            agent[0][2] = spawn_point[2]
+slime_sim.recordTrace()
+slime_sim.generateSimilarity()
+
 #
 # Set up figure
 #
@@ -103,8 +114,9 @@ max_len = max(x_max - x_min, y_max - y_min)
 axes = fig.add_subplot(111)
 
 # Set view
-axes.set_xlim(x_min - 0, x_min + max_len + 0)
-axes.set_ylim(y_min - 0, y_min + max_len + 0)
+margin = 10
+axes.set_xlim(x_min - margin, x_min + max_len + margin)
+axes.set_ylim(y_min - margin, y_min + max_len + margin)
 axes.set_xlabel('x')
 axes.set_ylabel('y')
 print("{}, {}, {}".format(x_min, y_min, max_len))
@@ -112,16 +124,42 @@ print("{}, {}, {}".format(x_min, y_min, max_len))
 #
 # Plotting agent travel traces
 #
+"""
 axes.scatter(x_t, y_t, alpha=0.02, marker='.',\
         color='gray', s=1) # Traces
+"""
+#
+# Plotting the agent traces from the grid
+#
+lowerb = math.floor(slice_back * depo.grid_ratio)
+upperb = math.floor(slice_front * depo.grid_ratio)
+trace_tex = slime_sim.agent_trace_texture[:,:,lowerb : upperb]
+trace_tex = np.sum(trace_tex, axis=2)
+#trace_tex = trace_tex / np.partition(trace_tex.flatten(), -2)[-2]
+extent = [0, depo.grid_size[0], 0, depo.grid_size[1]]
+plt.imshow(trace_tex.T, origin='lower',\
+ extent=extent,cmap='Greys',\
+ vmax = np.max(trace_tex) / 40)
+plt.colorbar()
 
+#
+# Plotting the word tokens
+#
 x_undis, y_undis = [], []
-for coor in depo.point_coord:
+x_dis, y_dis = [], []
+for i, coor in enumerate(depo.point_coord):
     if coor[2] >= slice_back and coor[2] <= slice_front:
         x_undis.append(coor[0])
         y_undis.append(coor[1])
+        if slime_sim.similarity_rank[i] > 0:
+            x_dis.append(coor[0])
+            y_dis.append(coor[1])
 axes.scatter(x_undis, y_undis, alpha = 0.08,\
     marker = 'o',color='green', s=2) # Word tokens
+axes.scatter(x_dis, y_dis, alpha = 0.03,\
+    marker = 'o',color='red', s=2) # discovered Word tokens
+axes.scatter([spawn_point[0]], spawn_point[1], alpha=1, marker='.',\
+        color='blue', s=30)
 
 
 print(depo.grid_size)

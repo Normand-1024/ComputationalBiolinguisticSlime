@@ -25,6 +25,11 @@ __device__ float dot(float* a, float* b){
     return a[0] * b[0] + a[1] * b[1] + a[2] * b[2];
 }
 
+// A wrap-around mod
+__device__ float mymod(float x, float m){
+    return fmod(fmod(x, m) + m, m);
+}
+
 // Given vector and axis, rotate an angle
 __device__ void rotate(float* vec, float* axis, float angle, float* output){
     float crossP[] = {0, 0, 0};
@@ -96,12 +101,12 @@ struct RNG {
     }
 };
 
-__global__ void slimePropagate(float *agentArray, int agentNum, 
+__global__ void slimePropagate(float *agentArray, int agentNum,
                  int *grid_res, float *grid_size,
                  float *parameter)
 {
     int idx = blockIdx.x * blockDim.x + threadIdx.x;
-    int grid_ratio = grid_res[0] / grid_size[0];
+    float grid_ratio = grid_res[0] / grid_size[0];
     float *pos = &agentArray[idx * 6 + 0 * 3];
     float *dir = &agentArray[idx * 6 + 1 * 3];
 
@@ -137,40 +142,37 @@ __global__ void slimePropagate(float *agentArray, int agentNum,
 
     float dist_s = rng.random_float() * parameter[SENSE_DIST];
     float p0 = tex3D(depositTexture, 
-                    fmod((pos[0] + dist_s * dir[0]), grid_size[0]) * grid_ratio,
-                    fmod((pos[1] + dist_s * dir[1]), grid_size[1]) * grid_ratio,
-                    fmod((pos[2] + dist_s * dir[2]), grid_size[2]) * grid_ratio
+                    mymod((pos[0] + dist_s * dir[0]),
+                         grid_size[2]) * grid_ratio + 0.5f,
+                    mymod((pos[1] + dist_s * dir[1]),
+                         grid_size[1]) * grid_ratio + 0.5f,
+                    mymod((pos[2] + dist_s * dir[2]),
+                         grid_size[0]) * grid_ratio + 0.5f
                     );
     float p1 = tex3D(depositTexture, 
-                    fmod((pos[0] + dist_s * dir2[0]), grid_size[0]) * grid_ratio,
-                    fmod((pos[1] + dist_s * dir2[1]), grid_size[1]) * grid_ratio,
-                    fmod((pos[2] + dist_s * dir2[2]), grid_size[2]) * grid_ratio
+                    mymod((pos[0] + dist_s * dir2[0]),
+                         grid_size[2]) * grid_ratio + 0.5f,
+                    mymod((pos[1] + dist_s * dir2[1]),
+                         grid_size[1]) * grid_ratio + 0.5f,
+                    mymod((pos[2] + dist_s * dir2[2]),
+                         grid_size[0]) * grid_ratio + 0.5f
                     );
     p0 = powf(p0, parameter[SHARPNESS]);
     p1 = powf(p1, parameter[SHARPNESS]);
 
     // === SAMPLE PHASE ===
     if (rng.random_float() > p0 / (p0 + p1)){
-        if (idx == 1){
-            printf("TURNED! - ");
-        }
         rotateLerpReplace(dir, dir2, parameter[MOVE_ANGLE]);
-    }
-    if (idx == 1){
-        printf("%f, ", tex3D(depositTexture,
-                pos[0] * grid_ratio,
-                pos[1] * grid_ratio,
-                pos[2] * grid_ratio));
     }
     float dist_m = rng.random_float() * parameter[MOVE_DISTANCE];
 
     // === UPDATE PHASE ===
-    pos[0] = fmod(pos[0] + dir[0] * dist_m, grid_size[0]); 
-    pos[1] = fmod(pos[1] + dir[1] * dist_m, grid_size[1]);
-    pos[2] = fmod(pos[2] + dir[2] * dist_m, grid_size[2]);
-
+    pos[0] = mymod(pos[0] + dir[0] * dist_m, grid_size[0]); 
+    pos[1] = mymod(pos[1] + dir[1] * dist_m, grid_size[1]);
+    pos[2] = mymod(pos[2] + dir[2] * dist_m, grid_size[2]);
+    
     if (idx == 1){
-        //printf("%f\n", fmod(pos[0] + dist_s * dir[0], grid_size[0]));
+        //printf("%f\n", mymod(pos[0] + dist_s * dir[0], grid_size[0]));
         //printf("%f\n", parameter[SENSE_ANGLE]);
         //printf("%f\n", dir[0] * dir2[0] + dir[1] * dir2[1] + dir[2] * dir2[2]);
         //printf("%f, %f", p0, p1);
@@ -186,5 +188,73 @@ __global__ void slimePropagate(float *agentArray, int agentNum,
         //printf("%f, %f, %f, %f, %f", parameter[0], parameter[1], parameter[2], parameter[3], parameter[4]);
         //printf("%d, %f", length, outputArray[0]);
         //printf("%f, %f", agentArray[0], agentArray[1]);
+    }
+}
+
+__global__ void recordTrace(float *agentTraces, int traceLen,
+                 float worldToGridRatio,
+                 int *traceTexture,
+                 int zlen, int ylen,
+                 int *grid_res)
+{
+    int idx = blockIdx.x * blockDim.x + threadIdx.x;
+    int total_th = blockDim.x * gridDim.x;
+    int cycle = 0;
+
+    while (cycle * total_th + idx < traceLen){
+        float *agentpos = &agentTraces[(cycle * total_th + idx) * 3];
+        //if (cycle * total_th + idx > 750000 - 100)
+        //    printf("%d | ", cycle * total_th + idx);
+        int x = floor(agentpos[0] * worldToGridRatio);
+        int y = floor(agentpos[1] * worldToGridRatio);
+        int z = floor(agentpos[2] * worldToGridRatio);
+
+        x = x % grid_res[0]; 
+        y = y % grid_res[1];
+        z = z % grid_res[2];
+        //if (x <= 0 || y <= 0 || z <= 0)
+        //    printf("%d, %d, %d, %f, %f, %f | ", x, y, z, agentpos[0], agentpos[1], agentpos[2]);
+        atomicAdd(&traceTexture[x * ylen * zlen + y * zlen + z], 1);
+
+        cycle += 1;
+    }
+}
+
+__global__ void generateSimilairy(
+                 int* similarity_rank,
+                 float* point_coord,
+                 int coordlen, int sensedist,
+                 int *traceTexture,
+                 float worldToGridRatio,
+                 int zlen, int ylen, int xlen)
+{
+    int idx = blockIdx.x * blockDim.x + threadIdx.x;
+    int total_th = blockDim.x * gridDim.x;
+    int cycle = 0;
+
+    while (cycle * total_th + idx < coordlen){
+        float *coord = &point_coord[(cycle * total_th + idx) * 3];
+        int xc = floor(coord[0] * worldToGridRatio);
+        int yc = floor(coord[1] * worldToGridRatio);
+        int zc = floor(coord[2] * worldToGridRatio);
+
+        int mcpm_similarity = 0;
+        int xRightBound = xc + sensedist < xlen ? xc + sensedist : xlen;
+        int yRightBound = yc + sensedist < ylen ? yc + sensedist : ylen;
+        int zRightBound = zc + sensedist < zlen ? zc + sensedist : zlen;
+        for (int x = xc - sensedist > 0 ? xc - sensedist : 0;
+                 x < xRightBound; x++){
+            for (int y = yc - sensedist > 0 ? yc - sensedist : 0;
+                    y < yRightBound; y++){
+                for (int z = zc - sensedist > 0 ? zc - sensedist : 0;
+                        z < zRightBound; z++){
+                    mcpm_similarity += 
+                     traceTexture[x * ylen * zlen + y * zlen + z];
+                }
+            }
+        }
+        similarity_rank[cycle * total_th + idx] = mcpm_similarity;
+
+        cycle += 1;
     }
 }
