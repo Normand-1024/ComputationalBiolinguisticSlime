@@ -6,8 +6,8 @@ from ipywidgets import interact
 
 from util import lerp, trilerp_deposit
 
-DATA_NAME =  '2020-05-01/global' #'back_trace' #
-SCALING_FACTOR = 10 #for local #20 # for global 10
+DATA_NAME =  'TNG-100' #'TNG-100' #'back_trace' #'2020-05-01/global'
+SCALING_FACTOR = 1 #for local #20 # for global 10 # for galaxy 1
 DATA_PATH = 'data/' + DATA_NAME
 
 # scaling: local = 20, global = 10
@@ -55,7 +55,6 @@ class Deposit:
                 self.n_channels) # Notice that x and z axis are switched
         self.point_coord, self.point_info, self.point_weight \
              = self.read_point_data()
-
         # point_grid and sorted_point are for detecting agents passing through data points
         self.point_grid, self.sorted_point = self.preprocess_ptdata(downsample=2)
         
@@ -166,8 +165,15 @@ class Deposit:
                 for ln in pt_data:
                     coord = ln.split(' ')
 
-                    if len(coord) is not dimension:
-                        continue
+                    weight = None
+                    if len(coord) == 4:
+                        weight = float(coord[3])
+                        coord = coord[:3]
+
+                    # Dimension checking
+                    # WARNING: Currently working with 3D data with weights (4d)
+                    #if len(coord) is not dimension:
+                    #    continue
 
                     # Processing point data
                     coord = np.array(list(map(lambda x: float(x), coord)))
@@ -179,11 +185,13 @@ class Deposit:
                         if info[-1] == '\n':
                             info = info[:-1]
 
-                        point_coord.append(coord[:3])
+                        point_coord.append(coord)
                         point_info.append(info)
-
-                        if len(coord) == 4:
-                            point_weight.append(coord[4])
+                        
+                        if weight:
+                            point_weight.append(weight)
+                        else:
+                            point_weight.append(1.0)
                         
                     pt_info_data.readline()
 

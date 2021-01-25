@@ -76,14 +76,16 @@ deposit = np.squeeze(depo.deposit.astype(np.float32), axis=3)
 
 # 
 # CUDA Slime Simulation Main
+#
 x_t, y_t, z_t = [], [], []
 slime_sim = CUDA_slime(deposit, agent_array,\
-            depo.point_coord, depo.point_info,\
+            depo.point_coord, depo.point_info, depo.point_weight,\
             grid_res, grid_size,\
             parameter)
 
 total_step = 1500
 reset_step = 500
+slime_sim.transferAgentTraceTex()
 for i in range(total_step):
     print(i, ' / ', total_step, end='\r')
     slime_sim.step()
@@ -99,7 +101,8 @@ for i in range(total_step):
             agent[0][0] = spawn_point[0]
             agent[0][1] = spawn_point[1]
             agent[0][2] = spawn_point[2]
-slime_sim.recordTrace()
+slime_sim.retrieveAgentTraceTex()
+#slime_sim.recordTrace()
 slime_sim.generateSimilarity()
 
 #
@@ -114,7 +117,7 @@ max_len = max(x_max - x_min, y_max - y_min)
 axes = fig.add_subplot(111)
 
 # Set view
-margin = 10
+margin = 0
 axes.set_xlim(x_min - margin, x_min + max_len + margin)
 axes.set_ylim(y_min - margin, y_min + max_len + margin)
 axes.set_xlabel('x')
@@ -131,15 +134,16 @@ axes.scatter(x_t, y_t, alpha=0.02, marker='.',\
 #
 # Plotting the agent traces from the grid
 #
-lowerb = math.floor(slice_back * depo.grid_ratio)
-upperb = math.floor(slice_front * depo.grid_ratio)
+lowerb = math.floor(slice_back * slime_sim.worldToTraceGridRatio)
+upperb = math.floor(slice_front * slime_sim.worldToTraceGridRatio)
 trace_tex = slime_sim.agent_trace_texture[:,:,lowerb : upperb]
 trace_tex = np.sum(trace_tex, axis=2)
+#print(np.sum(trace_tex))
 #trace_tex = trace_tex / np.partition(trace_tex.flatten(), -2)[-2]
 extent = [0, depo.grid_size[0], 0, depo.grid_size[1]]
 plt.imshow(trace_tex.T, origin='lower',\
  extent=extent,cmap='Greys',\
- vmax = np.max(trace_tex) / 40)
+ vmax = np.max(trace_tex) / 40) #<- Set the scaling factor here
 plt.colorbar()
 
 #
