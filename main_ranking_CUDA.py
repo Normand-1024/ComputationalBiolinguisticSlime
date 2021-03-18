@@ -1,3 +1,5 @@
+import sys
+import os
 import math
 import time
 import random
@@ -16,8 +18,10 @@ from simulation_CUDA import get_agent_array, CUDA_slime
 
 total_step = 1500
 reset_step = 1500
-start_token = 0
-path = "word_similarity_result\\graph\\TNG-100\\"
+start_token = 0                                     # EDIT THIS TO      PICK UP WHERE YOU LEFT OFF
+lowest_node_weight = 0.6                            # EDIT THIS TO      SET LOWEST NODE WEIGHT THRESHOLD FOR FILE GENERATION
+default_node = 0                                    # EDIT THIS TO      SET THE DEFAULT NODE ID WHEN LOADED
+path = "word_similarity_result\\graph\\TNG-100\\"   # EDIT THIS TO      CHANGE THE RESULT FOLDER PATH
 
 depo = Deposit(DATA_PATH)
 depo.params["num_agent"] = 3000
@@ -32,59 +36,34 @@ parameter = np.array([depo.params["sense_angle"],\
             depo.params["move_angle"],\
             depo.params["move_distance"]]).astype(np.float32)
 
-# 
-#   Decide whether to expansively generate networks or simply looping thru
 #
-expansive_graph_building = False
+#   If any argv is entered, generate meta file of the folder
+#       I do this because I don't want another file
+#
+if (len(sys.argv) > 1):
+    with open(path + "meta-main.txt", 'w+', encoding='utf-8') as f:
 
-if expansive_graph_building:
-    queue, discovered = deque(), [] # Generating a graph based on an origin point
-    queue.append(0)
-    queue.append(1)
-    while len(queue) is not 0:
-        i = queue.popleft()
-        spawn = depo.point_coord[i]
+        f.write(str(default_node) + '\n') # The node displayed upon load
 
-        print("doing: " + str(i) + ": " + depo.point_info[i])
-        print("currentStatus: ", queue, " || ", discovered)
+        # Write the list of ids available, seperated by white space
+        #       Assuming that all file names only contain its id other than extension
+        i = 0
+        for filename in os.listdir(os.getcwd() + "\\" + path):
+            if (filename != "meta-main.txt"):
+                f.write(filename.split('.')[0] + ' ' + \
+                    depo.point_info[int(filename.split('.')[0])] + '\n')
 
-        sim.initialize_agents(spawn_at=spawn)
-        agent_array = get_agent_array(sim.agents)
-        
-        slime_sim = CUDA_slime(deposit, agent_array,\
-                    depo.point_coord, depo.point_info, depo.point_weight,\
-                    grid_res, grid_size,\
-                    parameter)
+            i += 1
+    exit()
 
-        for j in range(total_step):
-            slime_sim.stepWithoutRecord()
+################################
+################################
 
-            if j % 500 == 0:
-                for agent in slime_sim.agent_array:
-                    agent[0][0] = spawn[0]
-                    agent[0][1] = spawn[1]
-                    agent[0][2] = spawn[2]
-
-        slime_sim.recordTrace()
-        slime_sim.generateSimilarity()
-
-        ranking = slime_sim.getSimilarityRank()
-
-        filename = "".join(x for x in depo.point_info[i] if x.isalnum())
-        if len(filename) > 20:
-            filename = path + str(i) + "-" + filename[:20]+".txt"
-        else:
-            filename = path + str(i) + "-" + filename +".txt"
-
-        # Push the similarity rankings to the queue and write to file
-        with open(filename, 'w+', encoding='utf-8') as f:
-            for entry in ranking:
-                f.write(depo.point_info[entry[0]] + '\n' +\
-                    str(entry[1]) + '\n')
-                #if entry[0] not in queue and entry[0] not in discovered:
-                #    queue.append(entry[0])
-else:
-    for i in range(start_token, len(depo.point_coord)):
+# 
+#   Main loop to generate
+#
+for i in range(start_token, len(depo.point_coord)):
+    if (depo.point_weight[i] >= lowest_node_weight):
         spawn = depo.point_coord[i]
         print("doing: " + str(i) + ": " + depo.point_info[i], end='')
         start_time = time.time()
@@ -117,14 +96,11 @@ else:
         ranking = slime_sim.getSimilarityRank()
         print(", %s" % (time.time() - start_time), end="")
 
-        filename = "".join(x for x in depo.point_info[i] if x.isalnum())
-        if len(filename) > 20:
-            filename = path + str(i) + "-" + filename[:20]+".txt"
-        else:
-            filename = path + str(i) + "-" + filename +".txt"
+        # The file name: Simply the id - its position on the array
+        filename = path + str(i) + ".txt"
 
         # 
-        #   Similarity format: "info \n (index, similarity, weight)"   
+        #   Similarity format: "info \n (index, similarity, node weight, coordinate)"   
         #
         with open(filename, 'w+', encoding='utf-8') as f:
             for similarity in ranking:#i, similarity in enumerate(slime_sim.similarity_rank):
@@ -132,3 +108,16 @@ else:
                     str(similarity) + '\n')
 
         print(", time: %s" % (time.time() - start_time))
+
+
+# 
+# ABANDONED CODE
+#
+
+""" 
+filename = "".join(x for x in depo.point_info[i] if x.isalnum())
+if len(filename) > 20:
+    filename = path + str(i) + "-" + filename[:20]+".txt"
+else:
+    filename = path + str(i) + "-" + filename +".txt" 
+"""
