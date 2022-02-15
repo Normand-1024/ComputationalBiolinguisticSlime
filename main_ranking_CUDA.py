@@ -18,10 +18,10 @@ from simulation_CUDA import get_agent_array, CUDA_slime
 
 total_step = 1500
 reset_step = 1500
-start_token = 0                                     # EDIT THIS TO      PICK UP WHERE YOU LEFT OFF
+start_token = 120592                                  # EDIT THIS TO      PICK UP WHERE YOU LEFT OFF
 lowest_node_weight = 0.6                            # EDIT THIS TO      SET LOWEST NODE WEIGHT THRESHOLD FOR FILE GENERATION
 default_node = 0                                    # EDIT THIS TO      SET THE DEFAULT NODE ID WHEN LOADED
-path = "word_similarity_result\\graph\\TNG-100\\"   # EDIT THIS TO      CHANGE THE RESULT FOLDER PATH
+path = "word_similarity_result\\graph\\master_global_2\\"   # EDIT THIS TO      CHANGE THE RESULT FOLDER PATH
 
 depo = Deposit(DATA_PATH)
 depo.params["num_agent"] = 3000
@@ -44,16 +44,18 @@ if (len(sys.argv) > 1):
     with open(path + "meta-main.txt", 'w+', encoding='utf-8') as f:
 
         f.write(str(default_node) + '\n') # The node displayed upon load
+        numbers = []
 
         # Write the list of ids available, seperated by white space
         #       Assuming that all file names only contain its id other than extension
-        i = 0
         for filename in os.listdir(os.getcwd() + "\\" + path):
-            if (filename != "meta-main.txt"):
-                f.write(filename.split('.')[0] + ' ' + \
-                    depo.point_info[int(filename.split('.')[0])] + '\n')
+            if (filename != "meta-main.txt" and filename != "full_data"):
+                numbers.append(int(filename.split('.')[0]))
 
-            i += 1
+        numbers.sort()
+        
+        for i in numbers:
+            f.write(str(i) + ' ' + depo.point_info[i] + '\n')
     exit()
 
 ################################
@@ -93,6 +95,7 @@ for i in range(start_token, len(depo.point_coord)):
         slime_sim.generateSimilarity()
         print(", %s" % (time.time() - start_time), end="")
 
+        slime_sim.ranking_threshold = 1000
         ranking = slime_sim.getSimilarityRank()
         print(", %s" % (time.time() - start_time), end="")
 
@@ -102,12 +105,20 @@ for i in range(start_token, len(depo.point_coord)):
         # 
         #   Similarity format: "info \n (index, similarity, node weight, coordinate)"   
         #
-        with open(filename, 'w+', encoding='utf-8') as f:
+        with open(filename, mode='w+', encoding='utf-8') as f:
+            for similarity in ranking: # Format: i2, similarity (connect from i to i2)
+                f.write(str(similarity[0]) + ', ' + str(similarity[1]) + '\n')
+
+            """ 
+            FOR THE OLD OUTPUT METHOD, TAKES A LOT OF SPACE
+
             for similarity in ranking:#i, similarity in enumerate(slime_sim.similarity_rank):
                 f.write(depo.point_info[similarity[0]] + '\n' +\
                     str(similarity) + '\n')
-
+            """
         print(", time: %s" % (time.time() - start_time))
+
+        slime_sim.clearGPUMemory()
 
 
 # 

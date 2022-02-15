@@ -153,7 +153,7 @@ class SimilarityRank:
     def writefile(self, name, method):
         with open(name + "_" + method + ".txt", 'w+', encoding='utf-8') as f:
             if (not self.if_delta):
-                f.write("Similarity Ranking:\n")
+                #f.write("Similarity Ranking:\n")
                 for i, r in enumerate(self.ranks):
                     f.write(str(i) + ": " + str(r['info']) + "\nsimilarity: " + str(r["similarity"]) + "\n--------------------------------\n")
             else:

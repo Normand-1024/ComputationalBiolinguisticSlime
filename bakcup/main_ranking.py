@@ -22,7 +22,7 @@ TEST CODE FOR SIMILARITY
 from deposit_reader import DATA_PATH, Deposit
 from word_similarity import SimilarityRank, find_similarity_rank, find_exhaustive_difference
 
-THE_WORD_IM_LOOKING_FOR = 'research_NOUN'
+THE_WORD_IM_LOOKING_FOR = 'love_VERB'
 
 depo = Deposit(DATA_PATH)
 idex = 0
@@ -36,8 +36,8 @@ for i, pti in enumerate(depo.point_info):
 pt = depo.point_coord[idex]
 
 #=========== THIS IS ALSO IRRELEVANT A LOT OF TIMES =====
-pt = np.array([383, 225, 214])
-pt = find_nearest_point(depo, pt)
+#pt = np.array([383, 225, 214])
+#pt = find_nearest_point(depo, pt)
 # ===========================================
 
 # ================= delete this =================
@@ -53,12 +53,14 @@ for i, coord in enumerate(depo.point_coord):
 """
 # ================= =============================
 
-cos_r = find_similarity_rank(depo, pt, 30, 'cosine')
-eucd_r = find_similarity_rank(depo, pt, 1000, 'euclidean')
+cos_r = find_similarity_rank(depo, pt, 500, 'cosine')
+eucd_r = find_similarity_rank(depo, pt, 500, 'euclidean')
 cos_r.writefile(THE_WORD_IM_LOOKING_FOR, 'cosine')
 eucd_r.writefile(THE_WORD_IM_LOOKING_FOR, 'euclidean')
 
 print("Cos and Euc finished")
+
+exit()
 
 depo.params['num_agent'] = 300 # For controlling agent numbers
 slime_r = find_similarity_rank(depo, pt, 30, 'slime_mold', slime_steps=1500,  slime_lifespan=500)

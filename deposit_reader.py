@@ -6,8 +6,8 @@ from ipywidgets import interact
 
 from util import lerp, trilerp_deposit
 
-DATA_NAME =  'TNG-100' #'TNG-100' #'back_trace' #'2020-05-01/global'
-SCALING_FACTOR = 1 #for local #20 # for global 10 # for galaxy 1
+DATA_NAME =  'master_global_1' #'TNG-100' #'back_trace' #'2020-05-01/global'
+SCALING_FACTOR = 10 #for local #20 # for global 10 # for galaxy 1
 DATA_PATH = 'data/' + DATA_NAME
 
 # scaling: local = 20, global = 10
@@ -188,7 +188,7 @@ class Deposit:
                         point_coord.append(coord)
                         point_info.append(info)
                         
-                        if weight:
+                        if weight is not None:
                             point_weight.append(weight)
                         else:
                             point_weight.append(1.0)

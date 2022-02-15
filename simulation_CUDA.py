@@ -215,9 +215,13 @@ class CUDA_slime:
     def transferAgentTraceTex(self):
         self.trace_texture_gpu = cuda.mem_alloc(self.agent_trace_texture.nbytes)
         cuda.memcpy_htod(self.trace_texture_gpu, self.agent_trace_texture)
-        
+
     def retrieveAgentTraceTex(self):
         cuda.memcpy_dtoh(self.agent_trace_texture, self.trace_texture_gpu)
+
+    def clearGPUMemory(self):
+        self.deposit_texture = None
+        self.trace_texture_gpu = None
 
 # ================
 # MAIN HERE
